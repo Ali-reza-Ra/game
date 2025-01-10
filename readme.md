@@ -19,26 +19,26 @@ The game requires Python 3.x and the following built-in libraries:
 - time (built-in)
 
 For Windows users, install the required curses library:
-```bash
+```
 pip install windows-curses
 ```
 
 ## Installation
 
 1. Clone this repository or download the game files:
-```bash
+```
 git clone <repository-url>
 ```
 
 2. Navigate to the game directory:
-```bash
+```
 cd terminal-collection-game
 ```
 
 ## How to Play
 
 1. Run the game:
-```bash
+```
 python new_game.py
 ```
 
