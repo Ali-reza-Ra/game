@@ -31,7 +31,7 @@ class Game:
         noecho()                  # Don't show typed characters
         cbreak()                  # React to keys instantly without Enter
         self.screen.keypad(True)  # Enable special keys
-        self.screen.nodelay(True) # Non-blocking input
+        self.screen.nodelay(True)  # Non-blocking input
         self.maxlines, self.maxcols = self.screen.getmaxyx()
         self.maxlines -= 1        # Adjust for zero-based indexing
         self.maxcols -= 1
@@ -55,19 +55,21 @@ class Game:
             if self.world[a][b] == ' ':
                 return a, b
 
-    def load_high_score(self):
+    @staticmethod
+    def load_high_score():
         """Load the high score from file
         
         Returns:
             int: The highest score achieved, 0 if no score file exists
         """
         try:
-            with open('score.txt', 'r') as file:
+            with open('score.txt') as file:
                 return int(file.read().strip())
         except (FileNotFoundError, ValueError):
             return 0
 
-    def save_high_score(self, score):
+    @staticmethod
+    def save_high_score(score):
         """Save a new high score to file
         
         Args:

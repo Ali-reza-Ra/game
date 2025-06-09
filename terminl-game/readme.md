@@ -27,7 +27,7 @@ pip install windows-curses
 
 1. Clone this repository or download the game files:
 ```
-git clone <repository-url>
+git clone github.com/Ali-reza-Ra/game
 ```
 
 2. Navigate to the game directory:
